@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Начало сверху */
+  min-height: 100vh;
+  overflow-y: auto; /* Прокрутка, если контент выходит за пределы экрана */
+}
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Два столбца */
+  gap: 0;
+  padding: 0;
+  border: 10px solid #333; /* Белая рамка вокруг галереи */
+  width: fit-content; /* Ширина под содержимое */
+}
+
+.gallery-container img {
+  width: 100%; /* Ширина изображения - 100% от колонки */
+  height: auto; /* Автоматическая высота для сохранения пропорций */
+  border: 10px solid #333; /* Белая рамка вокруг изображений */
+  object-fit: cover;
+}
